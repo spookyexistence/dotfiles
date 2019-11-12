@@ -1,0 +1,23 @@
+# Local/private config goes in the include
+[include]
+  path=~/.gitconfig.local
+[hub]
+  protocal=ssh
+[alias]
+  co = checkout
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
+[core]
+  excludesfiles = ~/.gitignore
+  editor = emacs
+[help]
+  autocorrect = 1
+
+[push]
+  default = simple
+
+[credential]
+  helper = osxkeychain

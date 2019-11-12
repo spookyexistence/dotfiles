@@ -1,0 +1,12 @@
+#/bin/zsh
+#
+# Quickly jump to my projects directory
+#
+# Type:
+#
+#   c[tab]
+#
+# ...to autocomplete on all your projects in directories
+# specified in `functions/_c`. Typically it's used like
+
+cd "$PROJECTS/$1"

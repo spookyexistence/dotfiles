@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#
+# Run all dotfile installers
+
+set -e
+
+cd "$DOTFILES"
+
+# find the installers and run them iteratively
+find . -name install.sh -exec sh -c "{}" \;

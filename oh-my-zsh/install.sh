@@ -1,3 +1,4 @@
+DOTFILES="$HOME/.dotfiles"
 source "$DOTFILES/bin/prompt"
 
 if [ ! -d "$HOME/.oh-my-zsh" ]

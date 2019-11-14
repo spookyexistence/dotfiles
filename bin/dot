@@ -9,6 +9,7 @@ set -e
 
 parentDirectory="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd -P)"
 dotfilesDirectory="$(cd "$( dirname "$parentDirectory" )" && pwd -P)"
+DOTFILES="$HOME/.dotfiles"
 
 displayUsageAndExit() {
 	echo "dot -- dotfiles management"
@@ -38,12 +39,10 @@ while test $# -gt 0; do
 	shift
 done
 
-export DOTFILES=$HOME/.dotfiles
-
 # Upgrade homebrew
 echo "› brew update"
 brew update
 
 # Install software
 echo "› $DOTFILES/scripts/install"
-$DOTFILES/scripts/install
+sh $DOTFILES/scripts/install

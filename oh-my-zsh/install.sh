@@ -6,7 +6,11 @@ then
     info "--> Installing 'oh-my-zsh..."
     export ZSH="$HOME/.oh-my-zsh"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" "" --unattended --silent
-    mv ~/.zshrc "$DOTFILES/zsh/oh-my-zshrc"
+
+    if [ ! -f "$DOTFILES/zsh/oh-my-zshrc" ]
+    then
+        mv ~/.zshrc "$DOTFILES/zsh/oh-my-zshrc"
+    fi
     sh "$DOTFILES/oh-my-zsh/install.sh"
 else
     if [ ! -d "$ZSH/custom/plugins/zsh-syntax-highlighting" ]

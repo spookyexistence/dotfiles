@@ -29,3 +29,5 @@ for file in ${${config_files:#*/path.zsh}:#*/completion.zsh}
 do
   source $file
 done
+
+export PYTHONPATH=$PYTHONPATH:/Users/emma/Library/Python/3.7/bin

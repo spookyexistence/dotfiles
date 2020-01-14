@@ -1,4 +1,3 @@
-
 export ZSH_THEME="spaceship"
 
 export plugins=(

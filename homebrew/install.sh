@@ -5,6 +5,7 @@
 # for using HomeBrew
 
 #Check for HomeBrew
+
 if test ! $(which brew)
 then
 
